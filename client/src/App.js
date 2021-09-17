@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import routes from './routers';
-const Example = (props) => {
+const App = (props) => {
   const showContent = (routes) => {
     let result = null;
     if (routes.length > 0) {
@@ -32,4 +32,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default App;

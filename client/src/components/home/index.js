@@ -1,17 +1,35 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// create by DungTMc on 15/9/2021
 
-function Home(props) {
-    return (
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import routes from '../../routers.sinhvien';
+const Home = (props) => {
+  const showContent = (routes) => {
+    let result = null;
+    if (routes.length > 0) {
+        result = routes.map((route, index) => {
+            return (
+                <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    component={route.component}
+                />
+            );
+        });
+    }
+    return <Switch>{result}</Switch>;
+};
+  return (
+    <div>
+        <ToastContainer/>
         <div>
-            <h3>Home</h3>
+            {showContent(routes)}
         </div>
-    )
-}
+    </div>
+  );
+};
 
-Home.propTypes = {
-
-}
-
-export default Home
-
+export default Home;
