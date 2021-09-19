@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      padding: 0px 10px 0px 0;
+      width: 265px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 1px 2px 4px 2px rgb(0 0 0 / 20%);
+      height: 100vh;
+    }
+    .logo {
+      padding: 20px 0;
+    }
+    .d-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .logo i {
+      color: blue;
+      font-size: 26px;
+    }
+    .navbar-list {
+      list-style: none;
+      padding-left: 20px;
+    }
+    .navbar-item a {
+      text-decoration: none;
+      align-items: center;
+      padding: 12px 10px;
+      width: 100%;
+      display: block;
+    }
+    .navbar-item span {
+      margin-left: 10px;
+      color: #313752;
+    }
+    .navbar-item {
+      transition: background-color 0.5s linear;
+    }
+    .navbar-item i {
+      color: #c4cff9;
+    }
+    .navbar-item:hover {
+      cursor: pointer;
+      background-color: #f6f7fd;
+      border-right: 3px solid blue;
+    }
+    .navbar-item:hover .navbar-content {
+      color: blue;
+    }
+    .navbar-item:hover .navbar-icon {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div class="navbar">
+      <div class="logo d-flex">
+        <h1>D2T Team</h1>
+        <i class="fas fa-angle-double-right"></i>
+      </div>
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Thông báo và tin tức</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Điểm danh</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Lịch học</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Khen thưởng</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Học phí</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">Dịch vụ trực tuyến</span></a
+          >
+        </li>
+        <li class="navbar-item">
+          <a href=""
+            ><i class="fas fa-bell navbar-icon"></i
+            ><span class="navbar-content">SMS</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
