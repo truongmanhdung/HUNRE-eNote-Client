@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "./components/home";
+import Notification from "./components/notification";
 
-const routes = [
+const routesSinhvien = [
     {
-        path: "/sinhvien/",
+        path: "/sinhvien/thong-bao",
         exact: false,
-        component: () => <Home/>,
+        component: () => <Notification/>,
     },
 ];
 
-export default routes;
+export default routesSinhvien;

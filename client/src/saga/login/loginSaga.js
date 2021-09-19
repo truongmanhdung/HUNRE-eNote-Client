@@ -4,10 +4,10 @@ import { createAction } from '@reduxjs/toolkit';
 
 export const addLoginAsync = createAction('login/loginCreate');
 
-function* loginSaga(action) {
+function* login(action) {
     
 }
 
-export function* productSaga() {
-  yield takeLatest(addLoginAsync, loginSaga);
+export function* loginSaga() {
+  yield takeLatest(addLoginAsync, login);
 }

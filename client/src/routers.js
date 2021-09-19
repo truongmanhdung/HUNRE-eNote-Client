@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./components/home";
+import Notification from "./components/notification";
 
 const routes = [
     {
@@ -8,9 +9,9 @@ const routes = [
         component: () => <Home/>,
     },
     {
-        path: "/login",
+        path: "/sinhvien/thongbao",
         exact: false,
-        component: () => <Home/>,
+        component: () => <Notification/>,
     },
 ];
 

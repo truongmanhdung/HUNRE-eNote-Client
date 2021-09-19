@@ -1,15 +1,19 @@
 // create by DungTMc on 15/9/2021
 
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch,useParams } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import routes from '../../routers.sinhvien';
+import routesSinhvien from '../../routers.sinhvien';
+import './style/index.css';
+import Navbar from '../navbar';
 const Home = (props) => {
+    let { slug } = useParams();
+    console.log(slug);
   const showContent = (routes) => {
     let result = null;
-    if (routes.length > 0) {
-        result = routes.map((route, index) => {
+    if (routesSinhvien.length > 0) {
+        result = routesSinhvien.map((route, index) => {
             return (
                 <Route
                     key={index}
@@ -25,8 +29,10 @@ const Home = (props) => {
   return (
     <div>
         <ToastContainer/>
-        <div>
-            {showContent(routes)}
+        
+        <div className="content-list">
+            <Navbar/>
+            {showContent(routesSinhvien)}
         </div>
     </div>
   );
