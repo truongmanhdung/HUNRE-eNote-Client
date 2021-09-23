@@ -5,13 +5,13 @@
 import createSagaMiddleware from 'redux-saga';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import rootSaga from '../saga';
-import productReducer from './productSlice'
+import { loginSuccess } from './login/loginSlice';
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [...getDefaultMiddleware({ thunk: false }), sagaMiddleware];
 
 
 const rootReducer = {
-   product: productReducer,
+   loginSuccess,
 }
 
 const store = configureStore({
