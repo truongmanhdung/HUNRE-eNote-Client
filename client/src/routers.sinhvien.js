@@ -1,5 +1,6 @@
 import React from "react";
 import Notification from "./components/notification";
+import Attendance from "./components/attendance";
 
 const routesSinhvien = [
     {
@@ -7,6 +8,11 @@ const routesSinhvien = [
         exact: false,
         component: () => <Notification/>,
     },
+    {
+        path: "/sinhvien/diem-danh",
+        exact: false,
+        component: () => <Attendance/>,
+    }
 ];
 
 export default routesSinhvien;

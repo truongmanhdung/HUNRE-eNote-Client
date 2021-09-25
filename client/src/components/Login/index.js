@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './styles/index.css';
-import {
-    Link
-} from "react-router-dom";
+import axios from "axios";
 
 function Login(props) {
+    const email = React.createRef();
+    const password = React.createRef();
+
+    useEffect(() => {
+        
+    },[])
+
+    const Login = () => {
+        fetch("http://localhost:8866/api/login", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                "studentID": email.current.value,
+                "password": password.current.value
+              })
+        }).then((response) => {
+            console.log(response);
+        }).catch((err) => {
+            console.log(err);
+        })
+        debugger;
+    }
+
     return <div className="login">
     <div className="row">
         <div className="col-6">
@@ -14,11 +37,10 @@ function Login(props) {
                     <h1>Login</h1>
                 </div>
                 <div className="form">
-                    <p className="or-sign-in-email">---------- or sign in with email ----------</p>
                     <b>Account:</b>
-                    <input type="text" placeholder="Username or your email" />
+                    <input type="text" placeholder="Username or your email" ref={email}/>
                     <b>Password:</b>
-                    <input type="password" placeholder="your password"/>
+                    <input type="password" placeholder="your password" ref={password}/>
                     {/* <div><input type="checkbox"/> <p>Remember me</p></div> */}
                     <div>
                         <input className="inp-cbu" id="rememberAccount" type="checkbox" value="rememberAccount" name='levelai' />
@@ -29,9 +51,7 @@ function Login(props) {
                         </label>
                         <span>Remember me</span>
                     </div>
-                    <a href="/home">
-                        <button className="button-login">Login</button>
-                    </a>
+                        <button className="button-login" onClick={Login}>Login</button>
                 </div>
             </div>
         </div>

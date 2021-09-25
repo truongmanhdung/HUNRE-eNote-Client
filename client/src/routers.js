@@ -19,6 +19,7 @@ const routes = [
         exact: false,
         component: () => <Notification/>,
     },
+    
 ];
 
 export default routes;
