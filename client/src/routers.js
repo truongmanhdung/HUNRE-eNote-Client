@@ -15,6 +15,7 @@ const routes = [
         exact: false,
         component: () => <Login/>,
     },
+    
 ];
 
 export default routes;

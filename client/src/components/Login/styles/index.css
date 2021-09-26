@@ -56,6 +56,10 @@
     display: block !important;
 }
 
+.button-login {
+    margin-top: 20px;
+}
+
 .social a p {
     margin-top: 2px;
 }

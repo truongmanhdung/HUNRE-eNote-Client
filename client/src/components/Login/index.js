@@ -1,55 +1,69 @@
-import React, {useState} from 'react'
+
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './styles/index.css';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {loginSuccess} from "../../redux/login/loginSlice";
-import {postLogin} from "../../apis/authApi";
+import axios from "axios";
 
 function Login(props) {
-    const [username, setUserName] = useState('');
-    const [password, setPassWord] = useState('');
-    const onLogin = (e) => {
-        e.preventDefault();
-        const user = {studentId: username, password: password}
-        console.log(user)
+    const email = React.createRef();
+    const password = React.createRef();
+
+    useEffect(() => {
+        
+    },[])
+
+    const Login = () => {
+        fetch("http://localhost:8866/api/login", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                "studentID": email.current.value,
+                "password": password.current.value
+              })
+        }).then((response) => {
+            console.log(response);
+        }).catch((err) => {
+            console.log(err);
+        })
+        debugger;
     }
-    return <div className="login">
+
+    return (
+    <div className="login">
         <div className="row">
             <div className="col-6">
-                {/*<div className='social'>
-                        <img src={logo} alt="" />
-                    </div>*/}
                 <div className="form-login">
                     <div style={{display: 'flex'}}>
-                        <h1>Đăng Nhập</h1>
+                        <h1>Login</h1>
                     </div>
-                    <form className="form" onSubmit={onLogin}>
-                        <b>Tài Khoản</b>
-                        <input type="text" placeholder="Nhập tài khoản" onChange={e => setUserName(e.target.value)}
-                               name="username"/>
-                        <b>Mật Khẩu</b>
-                        <input type="password" name="password" onChange={e => setPassWord(e.target.value)}
-                               placeholder="Nhập mật khẩu"/>
+                    <div className="form">
+                        <b>Account:</b>
+                        <input type="text" placeholder="Username or your email" ref={email}/>
+                        <b>Password:</b>
+                        <input type="password" placeholder="your password" ref={password}/>
                         {/* <div><input type="checkbox"/> <p>Remember me</p></div> */}
-                        <div style={{marginBottom: 10}}>
-                            <input className="inp-cbu" id="rememberAccount" type="checkbox" value="rememberAccount"
-                                   name='levelai'/>
-                            <label className="cbu"><span>
-                                    <svg width="12px" height="9px">
-                                        <polyline points="1 5 4 8 11 1"></polyline>
-                                    </svg></span>
+                        <div>
+                            <input className="inp-cbu" id="rememberAccount" type="checkbox" value="rememberAccount" name='levelai' />
+                            <label className="cbu" for="rememberAccount"><span>
+                                <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                    <polyline points="1 5 4 8 11 1"></polyline>
+                                </svg></span>
                             </label>
-                            <span>Ghi nhớ đăng nhập</span>
+                            <span>Remember me</span>
                         </div>
-                        <button type="submit" className="button-login">Đăng Nhập</button>
-                    </form>
+                            <button className="button-login" onClick={Login}>Login</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <div className="col-6 login-img"></div>
         </div>
     </div>
+    )
 }
+Login.propTypes = {
 
-Login.propTypes = {}
+}
 
 export default Login
