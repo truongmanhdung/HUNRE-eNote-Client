@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import routesSinhvien from '../../routers.sinhvien';
 import './style/index.css';
 import Navbar from '../navbar';
+import Header from "../header";
+import { Container, Row, Col } from 'reactstrap';
 const Home = (props) => {
     let { slug } = useParams();
     console.log(slug);
@@ -32,7 +34,16 @@ const Home = (props) => {
         
         <div className="content-list">
             <Navbar/>
-            {showContent(routesSinhvien)}
+            <div className="content">
+                <div className="header-position">
+                    <Header />
+                </div>
+                <div className="content-item">
+                    <div className="item-content">
+                        {showContent(routesSinhvien)}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   );

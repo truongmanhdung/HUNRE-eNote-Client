@@ -3,7 +3,7 @@ import Notification from "./components/notification";
 
 const routesSinhvien = [
     {
-        path: "/sinhvien/thong-bao",
+        path: "/sinh-vien/thong-bao",
         exact: false,
         component: () => <Notification/>,
     },

@@ -1,0 +1,120 @@
+.header{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.text-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-login{
+    display: flex;
+    align-items: center;
+}
+.header-icon-item{
+    margin: 0 20px;
+    color: blue;
+}
+.header-login {
+
+}
+.span-hello{
+    color: #959cb6;
+}
+.user-name{
+    margin-left: 5px;
+    color: #6c7293;
+}
+.header-user{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color linear 0.35s;
+}
+.header-user:hover{
+    background-color: #f8f8f8;
+}
+.header-user-focus{
+    background-color: #f8f8f8;
+}
+.link-profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(158, 152, 152);
+}
+.box-profile{
+    width: 380px;
+    background-color: white;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.5);
+}
+.box-user{
+    background-color: blue;
+    padding: 30px 40px;
+    color: white;
+}
+.profile-content{
+    margin-left: 10px;
+}
+.box-profile-content{
+    transition: background-color 0.35s linear;
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.link-profile i{
+    font-size: 12px;
+    color: #959cb6;
+}
+.box-profile-content:hover{
+    background-color: #eff1f8;
+}
+.profile-logout{
+    padding: 15px 20px;
+}
+.profile-logout p{
+    background-color: rgba(93, 120, 255, 0.1);
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #5d78ff;
+    cursor: pointer;
+    transition: background-color 0.35s linear;
+}
+.profile-logout p:hover{
+    background-color: #5d78ff;
+    color: white;
+}
+.header{
+    position: relative;
+}
+.box-profile{
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    transition: transform 0.5s linear;
+    animation: box-transform 0.35s ease-in-out;
+}
+
+
+@keyframes box-transform{
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.header-bottom{
+    padding: 10px 20px;
+}
+.header-bottom-span{
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 10px;
+}
+.header-bottom i{
+    padding-left: 10px;
+}
