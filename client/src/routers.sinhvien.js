@@ -4,12 +4,12 @@ import Attendance from "./components/attendance";
 
 const routesSinhvien = [
     {
-        path: "/sinhvien/thong-bao",
+        path: "/sinh-vien/thong-bao",
         exact: false,
         component: () => <Notification/>,
     },
     {
-        path: "/sinhvien/diem-danh",
+        path: "/sinh-vien/diem-danh",
         exact: false,
         component: () => <Attendance/>,
     }

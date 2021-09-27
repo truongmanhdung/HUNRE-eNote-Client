@@ -1,23 +1,19 @@
 import React from "react";
 import Home from "./components/home";
-import Login from "./components/Login/index.js";
 import Notification from "./components/notification";
+
+import Login from "./components/Login/index.js";
 
 const routes = [
     {
-        path: "/sinhvien",
+        path: "/sinh-vien",
         exact: false,
         component: () => <Home/>,
     },
     {
         path: "/Login",
-        exact: true,
-        component: () => <Login/>,
-    },
-    {
-        path: "/sinhvien/thongbao",
         exact: false,
-        component: () => <Notification/>,
+        component: () => <Login/>,
     },
     
 ];

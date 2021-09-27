@@ -85,7 +85,7 @@ function Attendance(props) {
         <div>
             <div>Học Kỳ</div>
             <div>
-                <select style={{width: '1500px', height: '30px', borderColor: 'blue'}}>
+                <select>
                     {hocki.map((item) => (
                         <option value="mango"> Học kỳ {item.name}</option>
                     ))}
