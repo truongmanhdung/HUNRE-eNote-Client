@@ -112,7 +112,7 @@ function Attendance(props) {
                                 </tr>
                                 {detail.map((item, index) => (
                                     <tr>
-                                        <td>index + 1</td>
+                                        <td>{index + 1}</td>
                                         <td>{item.date}</td>
                                         <td>{item.Ca}</td>
                                         <td>{item.ngDiemDanh}</td>
